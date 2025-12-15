@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice-Exam</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container">
+
+            <form class="form" id="form">
+
+                <label>
+                    Nombre/s:
+                    <input name="nombre" class="input-name" id="input-name" type="text" required>
+                </label>
+
+                <label>
+                    Email:
+                    <input name="email" class="input-email" id="input-email" type="email" required>
+                </label>
+
+                <label>
+                    Edad:
+                    <input name="edad" class="input-edad" id="input-edad" type="number" min="1" max="120" required>
+                </label>
+
+                <label>Comentario/s:
+                    <textarea name="comentario" class="comentario" id="comentario" maxlength="100"></textarea>
+                </label>
+
+                <div class="container-btn">
+                    <button type="submit" id="btn-guardar" class="btn-guardar">Guardar</button>
+                    <button type="button" id="btn-limpiar" class="btn-limpiar" onclick="limpiarLista()">Limpiar Lista</button>   
+                </div>
+
+            </form>
+        </div>
+
+        <div class="container-registros">
+            <h2 class="titulo-registros">📋 Registros Guardados</h2>
+        <ol id="listaRegistros"></ol>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
