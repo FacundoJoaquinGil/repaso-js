@@ -1,0 +1,18 @@
+{
+  "usuarios": [
+    {
+      "id": "1176",
+      "nombre": "joaquin",
+      "email": "facundojoagl@gmail.com",
+      "edad": "26",
+      "comentario": "holaa"
+    },
+    {
+      "id": "2dde",
+      "nombre": "lautaro",
+      "email": "lautyrex777@gmail.com",
+      "edad": "16",
+      "comentario": "uwu"
+    }
+  ]
+}
