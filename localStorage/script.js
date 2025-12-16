@@ -10,18 +10,13 @@ function guardarDatos(event) {
     const edad = document.getElementById("input-edad").value
     const comentario = document.getElementById("comentario").value
 
-
-
     const data = {
         nombre,
         email,
         edad,
         comentario
     }
-
     const registroJSON = localStorage.getItem("DatosUsuario");
-
-
     let listaUsuarios;
 
     if (registroJSON) {
@@ -29,8 +24,6 @@ function guardarDatos(event) {
     } else {
         listaUsuarios = [];
     }
-
-
     listaUsuarios.push(data)
 
     const listaActualizada = JSON.stringify(listaUsuarios)
@@ -49,11 +42,10 @@ function mostrarDatos() {
         listaHTML.innerHTML = '<p class="parrafo-warning">Aún no hay registros guardados...</p>';
         return;
     }
-
     const listaUsuarios = JSON.parse(registrosJSON)
-
+    
     listaUsuarios.forEach((usuario, index) => {
-        listaHTML.innerHTML += `<p class="lista" key="${index}">${usuario.nombre}, ${usuario.email}, ${usuario.edad}, ${usuario.comentario}</p>`
+        listaHTML.innerHTML += `<p class="lista">${usuario.nombre}, ${usuario.email}, ${usuario.edad}, ${usuario.comentario}</p>`
     });
 
 }
