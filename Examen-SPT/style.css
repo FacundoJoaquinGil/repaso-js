@@ -1,0 +1,46 @@
+body{
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #777474;
+}
+
+header img, a{
+    margin: 20px;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+header a:hover{
+    color: rgb(231, 63, 63);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+footer{
+    text-align: center;
+    background-color: #777474;
+    font-weight: 500;
+}

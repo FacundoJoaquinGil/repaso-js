@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen-SPT</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <img src="" alt="logo.png">
+            <a href="/">Home</a>
+            <a href="/Usuarios">Usuarios</a>
+            <a href="/Footer">Footer</a>
+        </header>
+
+        <main>
+
+            <h1>Todos los usuarios:</h1>
+
+            <ul>
+                <li id="listaTodosUsuarios"></li>
+            </ul>
+
+            <h1>Usuarios Activos ✅</h1>
+
+            <ul>
+                <li id="listaUsuariosActivos"></li>
+            </ul>
+
+            <div>
+
+                <h3>Busca un usuario por su email:</h3>
+
+                <label>
+                    <input type="email" name="email" id="input-email" required>
+                    <button type="submit" class="btn-enviar" id="btn-enviar">Buscar</button>
+                </label>
+
+                <ul>
+                    <li id="usuarioEmail"></li>
+                </ul>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p id="anio"></p>
+        </footer>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
