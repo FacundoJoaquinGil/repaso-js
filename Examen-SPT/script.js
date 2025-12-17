@@ -34,12 +34,37 @@ const usuarios = [
   }
 ];
 
-console.log(usuarios);
+const listaTodosUsuarios = document.getElementById("listaTodosUsuarios");
+function mostrarUsuarios() {
 
-function mostrarUsuarios(){
-  const listaUsuarios = ""
+  if (usuarios.length === 0) {
 
-  usuarios.map(usuario =>{
-    listaTodosUsuarios.innerHTML = `<li>${usuario.nombre}</li>`
-  })
+    listaTodosUsuarios.innerHTML = `<li class="listVoid">No se encontraron usuarios</li>`;
+
+  } else {
+
+    listaTodosUsuarios.innerHTML = "";
+
+    usuarios.forEach(usuario => {
+      listaTodosUsuarios.innerHTML += `<li>${usuario.nombre}</li>`;
+    });
+  }
 }
+mostrarUsuarios();
+
+const listaUsuariosActivos = document.getElementById("listaUsuariosActivos")
+
+function usuariosActivos() {
+  let listaActivos
+  listaActivos = usuarios.filter(usuario => usuario.activo === true)
+
+  if (listaActivos.length === 0) {
+    listaUsuariosActivos.innerHTML += `<li class="listVoid">No se encontraron usuarios</li>`
+  } else {
+    listaActivos.forEach(usuario => {
+      listaUsuariosActivos.innerHTML += `<li>${usuario.nombre}</li>`
+    })
+  }
+}
+usuariosActivos()
+
