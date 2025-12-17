@@ -45,7 +45,7 @@ function mostrarDatos() {
     const listaUsuarios = JSON.parse(registrosJSON)
     
     listaUsuarios.forEach((usuario, index) => {
-        listaHTML.innerHTML += `<p class="lista" key="${index}">${usuario.nombre}, ${usuario.email}, ${usuario.edad}, ${usuario.comentario}</p>`
+        listaHTML.innerHTML += `<p class="lista">${usuario.nombre}, ${usuario.email}, ${usuario.edad}, ${usuario.comentario}</p>`
     });
 
 }

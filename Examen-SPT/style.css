@@ -1,0 +1,67 @@
+body{
+    background-color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #777474;
+}
+
+header img, a{
+    margin: 20px;
+}
+
+header a{
+    text-decoration: none;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+header a:hover{
+    color: rgb(231, 63, 63);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-email{
+    height: 30px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.btn-buscar{
+    margin: 5px;
+    border-style: none;
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(51, 194, 70);
+    font-weight: 500;
+}
+.btn-buscar:hover{
+    background-color: rgb(25, 235, 53);
+
+}
+
+footer{
+    text-align: center;
+    background-color: #777474;
+    font-weight: 500;
+}

@@ -1,4 +1,11 @@
 {
+  "login": [
+    {
+      "id": "2b4a",
+      "user": "Fac.Joaquin",
+      "pass": "Joa_123"
+    }
+  ],
   "usuarios": [
     {
       "id": "1176",

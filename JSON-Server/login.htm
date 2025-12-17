@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="login-container">
+            <h1 class="titulo-login">Ingresa al Sistema</h1>
+            <h3 class="subtitulo-login">Usando tu usuario y contraseña</h3>
+            <label>Usuario:<input placeholder="ejemplo: Joaquin23" type="text" class="input-txt" id="input-txt"></label>
+            <label>Contraseña:<input placeholder="ejemplo: MiContra_02" type="text" class="input-pass" id="input-pass"></label>
+            <div class="container-btn">
+                <button type="button" class="btn-enviar" id="btn-enviar" onclick="ingresar()">Entrar</button>
+                <button type="button" class="btn-registro" id="btn-registro" onclick="registrar()">Registrarme</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="././login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
