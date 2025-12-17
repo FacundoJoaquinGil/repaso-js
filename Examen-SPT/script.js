@@ -35,22 +35,33 @@ const usuarios = [
 ];
 
 const listaTodosUsuarios = document.getElementById("listaTodosUsuarios");
+
 function mostrarUsuarios() {
-
+  listaTodosUsuarios.innerHTML = "";
   if (usuarios.length === 0) {
-
     listaTodosUsuarios.innerHTML = `<li class="listVoid">No se encontraron usuarios</li>`;
 
   } else {
-
-    listaTodosUsuarios.innerHTML = "";
-
-    usuarios.forEach(usuario => {
-      listaTodosUsuarios.innerHTML += `<li>${usuario.nombre}</li>`;
-    });
+    listaUsuarios()
   }
 }
 mostrarUsuarios();
+
+function listaUsuarios(){
+
+  usuarios.forEach((usuario, index) => {
+    listaTodosUsuarios.innerHTML += `<li>
+                                      ${usuario.nombre}  
+                                      <button type="button" class="btn-cambiar" onclick="cambiarEstado(${index})">Cambiar Estado</button>
+                                      <button type="button" class="btn-eliminar" onclick="eliminar(${index})">Eliminar</button>
+                                    </li>`;
+  });
+}
+
+function eliminar(index){
+  usuarios.splice(index, 1);
+  mostrarUsuarios()
+}
 
 const listaUsuariosActivos = document.getElementById("listaUsuariosActivos")
 
@@ -68,3 +79,18 @@ function usuariosActivos() {
 }
 usuariosActivos()
 
+formBuscar.addEventListener("submit", buscarEmail)
+
+function buscarEmail(event){
+  event.preventDefault()
+
+  const email = document.getElementById("input-email").value
+  const usuarioEmailEncontrado = usuarios.find(usuario => usuario.email === email)
+
+  if(usuarioEmailEncontrado){
+    usuarioEmail.innerHTML = `<p class="sucess">Usuario encontrado ${usuarioEmailEncontrado.nombre}</p>`
+    email.innerHTML = ""
+  }else{
+    usuarioEmail.innerHTML = `<p class="listVoid">No se encontraron usuarios</p>`
+  }
+}

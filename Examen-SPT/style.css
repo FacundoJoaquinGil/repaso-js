@@ -44,6 +44,36 @@ main{
     flex: 1;
 }
 
+.btn-eliminar{
+    margin: 5px;
+    border-style: none;
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    color:antiquewhite;
+    background-color: rgb(194, 51, 51);
+    font-weight: 500;
+}
+.btn-eliminar:hover{
+    background-color: rgb(235, 25, 25);
+}
+
+.btn-cambiar{
+    margin: 5px;
+    border-style: none;
+    height: 30px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 5px;
+    color:antiquewhite;
+    background-color: rgb(194, 192, 51);
+    font-weight: 500;
+}
+.btn-cambiar:hover{
+    background-color: rgb(221, 235, 25);
+}
+
 .listVoid{
     color: red;
 }
@@ -66,7 +96,10 @@ main{
 }
 .btn-buscar:hover{
     background-color: rgb(25, 235, 53);
+}
 
+.sucess{
+    color: rgb(25, 235, 53);
 }
 
 footer{
