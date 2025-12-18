@@ -37,7 +37,9 @@ const usuarios = [
 const listaTodosUsuarios = document.getElementById("listaTodosUsuarios");
 
 function mostrarUsuarios() {
+  
   listaTodosUsuarios.innerHTML = "";
+
   if (usuarios.length === 0) {
     listaTodosUsuarios.innerHTML = `<li class="listVoid">No se encontraron usuarios</li>`;
 
@@ -61,11 +63,15 @@ function listaUsuarios(){
 function eliminar(index){
   usuarios.splice(index, 1);
   mostrarUsuarios()
+  usuariosActivos();
 }
 
 const listaUsuariosActivos = document.getElementById("listaUsuariosActivos")
 
 function usuariosActivos() {
+
+  listaUsuariosActivos.innerHTML = "";
+
   let listaActivos
   listaActivos = usuarios.filter(usuario => usuario.activo === true)
 
@@ -89,8 +95,14 @@ function buscarEmail(event){
 
   if(usuarioEmailEncontrado){
     usuarioEmail.innerHTML = `<p class="sucess">Usuario encontrado ${usuarioEmailEncontrado.nombre}</p>`
-    email.innerHTML = ""
+    
   }else{
     usuarioEmail.innerHTML = `<p class="listVoid">No se encontraron usuarios</p>`
   }
+  document.getElementById("input-email").value = ""
+}
+
+function cambiarEstado(index) {
+  usuarios[index].activo = !usuarios[index].activo
+  usuariosActivos();
 }
