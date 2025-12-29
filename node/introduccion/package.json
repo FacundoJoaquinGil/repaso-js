@@ -1,0 +1,28 @@
+{
+  "name": "repaso-node",
+  "version": "0.0.1",
+  "description": "repaso de node con practica, db conection, rutas, etc",
+  "homepage": "https://github.com/FacundoJoaquinGil/repaso-node#readme",
+  "bugs": {
+    "url": "https://github.com/FacundoJoaquinGil/repaso-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacundoJoaquinGil/repaso-node.git"
+  },
+  "license": "ISC",
+  "author": "Joaquin Gil",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "env-var": "^7.5.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-json-server",
+  "version": "0.0.1",
+  "description": "pequeño servidor con informacion de cursos",
+  "homepage": "https://github.com/FacundoJoaquinGil/repaso-node#readme",
+  "bugs": {
+    "url": "https://github.com/FacundoJoaquinGil/repaso-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacundoJoaquinGil/repaso-node.git"
+  },
+  "license": "ISC",
+  "author": "Joaquin-Gil",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

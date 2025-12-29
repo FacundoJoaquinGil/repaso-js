@@ -1,0 +1,43 @@
+En un salón silencioso, detrás de un portón pesado,
+donde el tiempo se siente lento
+y cada paso es contado,
+Joaquín Gil repasa Node,
+su viejo amigo encendido,
+ese motor de JavaScript
+que lo acompaña en el camino.
+
+Entre módulos y promesas,
+entre callbacks que no esperan,
+aprende a manejar el flujo
+como quien abre una puerta.
+Y piensa en quienes pronto verán
+la magia del require() verdadero:
+un puente entre mundos distintos,
+un hilo que une cielo y suelo.
+
+“Todo es posible”, dice Node,
+“si sabés manejar tu ruta”;
+y Joaquín, con firmeza y calma,
+va puliendo cada duda.
+Porque enseñar es también crear
+servidores que nunca caen,
+procesos que escuchan al otro
+y respuestas que no se demoran.
+
+En la penitenciaría habrá voces
+buscando una nueva salida,
+y vos, maestro del backend,
+vas a darles otra vía.
+Un console.log de esperanza,
+un npm start de comienzo,
+mostrar que incluso en lo oscuro
+siempre existe un puerto abierto.
+
+Y así, entre puertas y claves,
+entre módulos que se enlazan,
+Joaquín lleva Node consigo
+como luz que nunca se apaga.
+Porque el código, bien enseñado,
+no libera… pero acompaña.
+Y a veces, en silencio profundo,
+eso es más fuerte que una muralla.

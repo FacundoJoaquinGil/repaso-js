@@ -1,0 +1,74 @@
+body{
+    background-color: #333;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+}
+
+.btnCambiar{
+    align-items: center;
+    background-color: rgb(84, 203, 84);
+    height: 45px;
+    margin: 10px;
+    border-radius: 5px; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size:3ch;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.btnCambiar:hover{
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.626);
+    background-color: rgb(41, 216, 41);
+}
+
+.btnReiniciar{ 
+    background-color: rgb(228, 67, 67);
+    align-items: center;
+    height: 45px;
+    margin: 10px;
+    border-radius: 5px; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700 !important;
+    font-size:3ch;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.btnReiniciar:hover{
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.626);
+    background-color: rgb(246, 28, 28);
+}
+
+p{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size:3ch;
+    color: white;
+}
+
+h1{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 900;
+    font-size:3ch;
+    color: rgb(242, 236, 236);
+}
+h3{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700;
+    font-size:3ch;
+    color: rgb(231, 79, 79);
+}

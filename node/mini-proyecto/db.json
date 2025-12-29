@@ -1,0 +1,41 @@
+{
+    "profesores": [
+        {
+            "nombre": "Joaquin",
+            "apellido": "Gil",
+            "materias": [
+                {
+                    "nombre": "JavaScript"
+                },
+                {
+                    "nombre": "NodeJS"
+                },
+                {
+                    "nombre": "SQL"
+                }
+            ]
+        }
+    ],
+    "Alumnos": [
+        {
+            "nombre": "Lautaro",
+            "apellido": "Gil",
+            "promedio": 9.0
+        },
+        {
+            "nombre": "Lucas",
+            "apellido": "Gil",
+            "promedio": 8.5
+        }
+    ],
+    "curso": [
+        {   "titulo": "Repaso JavaScript desde 0",
+            "Dificultad": "Facil",
+            "duracion": 6
+        },
+        {   "titulo": "Repaso NodeJS/EJS",
+            "Dificultad": "Intermedio",
+            "duracion": 8
+        }
+    ]
+}

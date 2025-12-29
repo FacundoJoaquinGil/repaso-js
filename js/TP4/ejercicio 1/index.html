@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <div class="contenedor">
+    <h1>Piensa un Numero</h1>
+      <input
+        id="inputIngresarNumero"
+        class="inputIngresarNumero"
+        type="number"
+      />
+
+      <button class="btnCambiar" type="button" onclick="adivinarNumero()" id="comprobar">Comprobar</button>
+
+      <button onclick="reiniciar()" class="btnReiniciar" id="btnReiniciar" type="button">Reiniciar</button>
+      <h3 id="contador" class="contador">Intentos: 0</h3>
+
+      <p id="pistas" class=""></p>
+
+    </div>
+
+    <script src="./ejercicio1.js"></script>
+  </body>
+</html>

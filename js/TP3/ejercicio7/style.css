@@ -1,0 +1,68 @@
+body{
+    background-color: #333;
+}
+
+.inicialTxt{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 500;
+    font-size:3ch;
+    color: rgb(242, 236, 236);
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.btn-input{
+    flex-direction: row;
+}
+
+.btnCambiar{
+    align-items: center;
+    background-color: rgb(84, 203, 84);
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 5px; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700 !important;
+    font-size:3ch;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+.btnCambiar:hover{
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.626);
+    background-color: rgb(41, 216, 41);
+}
+
+.btnReiniciar{ 
+    background-color: rgb(228, 67, 67);
+    align-items: center;
+    height: 45px;
+    margin-left: 10px;
+    border-radius: 5px; 
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 700 !important;
+    font-size:3ch;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.btnReiniciar:hover{
+    cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.626);
+    background-color: rgb(246, 28, 28);
+}
+
+.inputTxt{
+    height: 40px;
+    width: 250px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 300;
+    font-size:3ch;
+}
