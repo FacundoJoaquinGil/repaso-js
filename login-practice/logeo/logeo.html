@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="../logo.svg">
+    <link rel="stylesheet" href="./logeo.css">
+</head>
+
+<body>
+
+    <div class="contedor-padre-login">
+        <main>
+
+            <div class="contenedor-titulo-login">
+                <img src="../logo.svg" alt="logo">
+                <h1>Ingreso de usuarios</h1>
+            </div>
+
+            <div class="contenedor-login">
+                <form id="form">
+
+                    <label class="lbl-mail"> Correo electrónico
+                        <input class="input-mail" id="input-mail" type="email" minlength="6" required>
+                    </label>
+
+                    <label class="lbl-pass"> Contraseña
+                        <input class="input-pass" id="input-pass" type="password" minlength="6" placeholder="••••••••" required>
+                    </label>
+
+                    <div class="contenedor-checkbox">
+                        <label class="lbl-checkpass"> Ver contraseña 
+                            <input class="input-checkbox" id="checkboxPass" type="checkbox" onchange="checkboxEstado()"> 
+                        </label>
+                    </div>
+
+                    <div class="botones-login">
+                        <button class="btn-ingresar" type="submit">Iniciar sesión</button>
+                        <a href="./problema-tuyo.jpg">Olvidaste tu contraseña?</a>
+                        <a href="../registro/registro.html">Crear una cuenta</a>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <nav class="footer-links">
+                <a href="">Términos</a>
+                <a href="">Privacidad</a>
+                <a href="">Documentación</a>
+                <a href="">Contacto</a>
+                <a href="">Soporte</a>
+                <a href="">No compartir mi información personal</a>
+            </nav>
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./logeo.js"></script>
+</body>
+
+</html>

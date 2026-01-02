@@ -51,15 +51,14 @@ main{
 
 
 
-.contenedor-login label {
+.lbl-pass, .lbl-mail{
     display: flex;
     flex-direction: column;
-
     color: white;
     margin: 10px;
 }
 
-.contenedor-login input {
+.input-pass, .input-mail{
     border: 2px solid #2b3138;
     background-color: #0d1118;
     border-radius: 5px;
@@ -89,6 +88,18 @@ main{
     color: #4ca5ff;
     text-decoration: none;
 }
+
+.contenedor-checkbox{
+    display: flex ;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.lbl-checkpass{
+    font-weight: 500;
+    color: #514f4f;
+}
+
 
 .btn-ingresar{
     margin: 10px;

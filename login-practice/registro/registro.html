@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="icon" href="../logo.svg">
+    <link rel="stylesheet" href="./registro.css">
+</head>
+
+<body>
+
+    <div class="contenedor-padre-registro">
+        <main>
+
+            <div class="contenedor-titulo-registro">
+                <img src="../logo.svg" alt="logo">
+                <h1>Registro de usuarios</h1>
+            </div>
+
+            <div class="contenedor-registro">
+                <form id="form-registro">
+
+                    <label>
+                        Nombre de usuario
+                        <input id="input-username-register" type="text" minlength="4" required>
+                    </label>
+
+                    <label>
+                        Correo electrónico
+                        <input id="input-mail-register" type="email" minlength="6" required>
+                    </label>
+
+                    <label>
+                        Contraseña
+                        <input id="input-pass-register" type="password" minlength="6" placeholder="••••••••" required>
+                    </label>      
+
+                    <div class="botones-registro">
+                        <button class="btn-registrarse" type="submit">Crear cuenta</button>
+                        <a href="../logeo/logeo.html">¿Ya tenés una cuenta? Iniciar sesión</a>
+                    </div>
+
+                </form>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <nav class="footer-links">
+                <a href="">Términos</a>
+                <a href="">Privacidad</a>
+                <a href="">Documentación</a>
+                <a href="">Contacto</a>
+                <a href="">Soporte</a>
+            </nav>
+        </footer>
+
+    </div>
+
+    <script src="./registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+</body>
+
+</html>
