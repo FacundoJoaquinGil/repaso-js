@@ -16,10 +16,18 @@ async function ingresar(event) {
         const usuarioEncontrado = await axios.get(`${url}?mail=${mail}&pass=${pass}`)
 
         if(usuarioEncontrado.data.length != 0){
+            
+            const usuario = usuarioEncontrado.data[0];
+            
+            const usuarioLogeado = {
+                id: usuario.id,
+                username: usuario.username,
+                mail: usuario.mail
+            }
+            
+            localStorage.setItem("usuarioLogeado", JSON.stringify(usuarioLogeado))
+            
             window.location.href = "../home/home.html"
-
-            let username = usuarioEncontrado.data[0].username
-            localStorage.setItem("username",username)
 
         }else{
             alert("contraseña o email incorrectos")

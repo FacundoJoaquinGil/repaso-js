@@ -11,9 +11,41 @@
 
 <body>
 
-    <div class="container-home">
-        <h1 id="titulo-bienvenida" class="titulo-bienvenida"></h1>
-    </div>
+    <header>
+        <div class="columna1">
+            <a class="foto-perfil"  href="#home"><img src="" alt="foto-perfil"></a>
+            <h2 id="titulo-bienvenida" class="titulo-bienvenida"></h2>
+        </div>
+
+        <div class="columna2">
+            <p id="parrafoMail" class="parrafoMail"></p>
+            <button class="btn-cs" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-home">
+            <h3 class="titulo-comentario">Agregar un Comentario</h3>
+            <textarea class="txtComentario" id="txtComentario" placeholder="Escribe tu comentario aqui..." maxlength="350" required></textarea>
+
+            <button class="btn-subirComentario" type="submit">Publicar Comentario</button>
+        </div>
+
+        <div class="contenedor-comentarios">
+            <p class="comentarios-lista">No hay comentarios todavía. ¡Sé el primero en comentar!</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+            <nav class="footer-links">
+                <a href="">Términos</a>
+                <a href="">Privacidad</a>
+                <a href="">Documentación</a>
+                <a href="">Contacto</a>
+                <a href="">Soporte</a>
+                <a href="">No compartir mi información personal</a>
+            </nav>
+        </footer>
 
     <script src="./home.js"></script>
 </body>

@@ -1,10 +1,147 @@
-body{
+body {
     background-color: #0d1118;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
 }
 
-.titulo-bienvenida{
-    text-align: center;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.columna1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.columna2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.foto-perfil {
+    background-color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.titulo-bienvenida {
     color: white;
+}
+
+.parrafoMail {
+    font-weight: 500;
+    color: #555;
+    margin-right: 20px;
+}
+
+.btn-cs {
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #852222;
+    height: 40px;
+    width: 200px;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    cursor: pointer;
+    color: white;
+}
+
+.btn-cs:hover {
+    background-color: #9f2828;
+}
+
+main {
+    flex: 1;
+}
+
+.container-home {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #151a22;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 750px;
+    min-height: 200px;
+}
+
+.btn-subirComentario{
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #228535;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    cursor: pointer;
+    color: white;
+}
+
+.titulo-comentario{
+    color: white;
+}
+
+.txtComentario{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+    border: 2px solid #2b3138;
+    background-color: #0d1118;
+    border-radius: 5px;
+    resize: none;
+    min-height: 80px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 500;
+}
+
+.txtComentario:focus {
+    border-color: #1f72f5;
+    outline: none;
+    caret-color: white;
+}
+
+.btn-subirComentario:hover{
+    background-color: #289f40;
+}
+
+.contenedor-comentarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #151a22;
+    border-radius: 10px;
+    width: 750px;
+    min-height: 200px;
+}
+
+.comentarios-lista{
+    font-weight: 500;
+    color: #555;
+}
+
+.footer {
+    height: 50px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-links a {
+    font-weight: 500;
+    color: #979fa9;
+    text-decoration: none;
 }
