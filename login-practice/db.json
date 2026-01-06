@@ -1,16 +1,19 @@
 {
   "usuarios": [
     {
-      "id": "1",
+      "id": 1,
       "username": "FacJoaquin99",
       "mail": "facundojoagl@gmail.com",
-      "pass": "123456"
-    },
-    {
-      "id": "fa1f",
-      "username": "LautaroRex777",
-      "mail": "lautarorex777@gmail.com",
-      "pass": "123456"
+      "pass": "123456",
+      "fotoPerfil": "../image/perfilJoa.png",
+      "tareas": [
+        {
+          "id": 1,
+          "fecha": "2026-01-06",
+          "hora": "12:30",
+          "tarea": "Comer"
+        }
+      ]
     }
   ]
 }

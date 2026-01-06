@@ -26,13 +26,19 @@ header {
     align-items: center;
 }
 
-.foto-perfil {
-    background-color: white;
+.foto-perfil-contenedor{
+    background-color: rgba(255, 255, 255, 0.283);
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-right: 20px;
 }
+
+.foto-perfil {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 .titulo-bienvenida {
     color: white;
@@ -53,6 +59,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.247);
     cursor: pointer;
     color: white;
+    font-weight: 700;
 }
 
 .btn-cs:hover {
@@ -75,7 +82,7 @@ main {
     min-height: 200px;
 }
 
-.btn-subirComentario{
+.btn-subirTarea{
     margin-top: 10px;
     border-radius: 5px;
     background-color: #228535;
@@ -83,13 +90,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.247);
     cursor: pointer;
     color: white;
+    font-weight: 700;
 }
 
-.titulo-comentario{
+.titulo-tarea{
     color: white;
 }
 
-.txtComentario{
+.txtTarea{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 5px;
     border: 2px solid #2b3138;
@@ -102,31 +110,108 @@ main {
     font-weight: 500;
 }
 
-.txtComentario:focus {
+.txtTarea:focus {
     border-color: #1f72f5;
     outline: none;
     caret-color: white;
 }
 
-.btn-subirComentario:hover{
+.btn-subirTarea:hover{
     background-color: #289f40;
 }
 
-.contenedor-comentarios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contenedor-tareas{
     margin: 0 auto;
-    margin-top: 10px;
+
+    margin-top: 10px; 
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
     background-color: #151a22;
     border-radius: 10px;
     width: 750px;
-    min-height: 200px;
+    
 }
 
-.comentarios-lista{
+.tareas-lista{
     font-weight: 500;
     color: #555;
+}
+
+.encabezado-tarea{
+    display: flex;
+    align-items: center; /* mantiene todo centrado */
+    gap: 10px;
+}
+
+.input-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #bbb;
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+}
+
+.input-checkbox::before {   
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    background-color: #1f72f5;
+    border-radius: 2px;
+}
+
+.input-checkbox:checked {
+    border-color: #1f72f5;
+}
+
+.input-checkbox:checked::before {
+    transform: scale(1);
+}
+
+.pFecha{
+    margin-right: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.pHora{
+    font-weight: 500;
+    color: #555;
+    
+}
+
+.pTarea{
+    color: white;
+    font-weight: 500;
+}
+
+.btn-eliminar{
+    margin-left: auto;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color: #852222;
+    height: 40px;
+    width: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    cursor: pointer;
+    color: white;
+}
+
+.btn-eliminar:hover{
+    background-color: #9f2828;
+}
+
+.contenedor-comentario-tarea{
+    margin-left: 45px;    
 }
 
 .footer {

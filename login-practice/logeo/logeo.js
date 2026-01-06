@@ -22,7 +22,8 @@ async function ingresar(event) {
             const usuarioLogeado = {
                 id: usuario.id,
                 username: usuario.username,
-                mail: usuario.mail
+                mail: usuario.mail,
+                fotoPerfil: usuario.fotoPerfil
             }
             
             localStorage.setItem("usuarioLogeado", JSON.stringify(usuarioLogeado))

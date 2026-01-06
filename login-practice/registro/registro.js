@@ -9,9 +9,9 @@ async function registrar(event) {
     const username = document.getElementById("input-username-register").value
     const mail = document.getElementById("input-mail-register").value
     const pass = document.getElementById("input-pass-register").value
-
+    
     const data = {username, mail , pass}
-
+    
     try {
         const registro = await axios.post(url, data);
         alert(`${registro.data.username} registrado con exito`);
@@ -19,3 +19,6 @@ async function registrar(event) {
         console.log(error)
     }
 }
+
+//const image = document.getElementById("input-image-register").value
+
