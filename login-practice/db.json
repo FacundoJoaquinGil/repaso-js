@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "username": "FacJoaquin99",
       "mail": "facundojoagl@gmail.com",
       "pass": "123456",
@@ -12,6 +12,27 @@
           "fecha": "2026-01-06",
           "hora": "12:30",
           "tarea": "Comer"
+        },
+        {
+          "id": 1767813000031,
+          "fecha": "07/01/2026",
+          "hora": "16:09",
+          "tarea": "Estudiar Node"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "MoyaDev",
+      "mail": "moya@gmail.com",
+      "pass": "654321",
+      "fotoPerfil": "../image/perfilMoya.png",
+      "tareas": [
+        {
+          "id": 1,
+          "fecha": "2026-01-07",
+          "hora": "18:00",
+          "tarea": "Estudiar JavaScript"
         }
       ]
     }

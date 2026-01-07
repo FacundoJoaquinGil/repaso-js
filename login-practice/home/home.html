@@ -27,23 +27,25 @@
     </header>
 
     <main>
-        <div class="container-home">
+        <form id="formTarea" class="container-home">
             <h3 class="titulo-tarea">Agrega una tarea</h3>
-            <textarea class="txtTarea" id="txtTarea" placeholder="Escribe tu tarea aqui..." maxlength="350" required></textarea>
+
+            <textarea class="txtTarea" id="txtTarea" placeholder="Escribe tu tarea aqui..." minlength="4" maxlength="350" required></textarea>
 
             <button class="btn-subirTarea" type="submit">Publicar Tarea</button>
-        </div>
+        </form>
+
 
         <div class="contenedor-tareas">
             <!-- <p class="tareas-lista">No hay tareas todavía. ¡Escribe la primera!</p> -->
-            
+
             <div class="encabezado-tarea">
                 <input type="checkbox" class="input-checkbox">
                 <p id="pFecha" class="pFecha">06/01/2026</p>
                 <p id="pHora" class="pHora">14:06</p>
                 <button class="btn-eliminar">Eliminar</button>
             </div>
-            
+
             <div class="contenedor-comentario-tarea">
                 <p id="pTarea" class="pTarea">Hacer la comida para mi familia</p>
             </div>
@@ -51,16 +53,17 @@
     </main>
 
     <footer class="footer">
-            <nav class="footer-links">
-                <a href="">Términos</a>
-                <a href="">Privacidad</a>
-                <a href="">Documentación</a>
-                <a href="">Contacto</a>
-                <a href="">Soporte</a>
-                <a href="">No compartir mi información personal</a>
-            </nav>
-        </footer>
+        <nav class="footer-links">
+            <a href="">Términos</a>
+            <a href="">Privacidad</a>
+            <a href="">Documentación</a>
+            <a href="">Contacto</a>
+            <a href="">Soporte</a>
+            <a href="">No compartir mi información personal</a>
+        </nav>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="./home.js"></script>
 </body>
 
