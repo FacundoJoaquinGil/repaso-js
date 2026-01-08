@@ -8,16 +8,22 @@
       "fotoPerfil": "../image/perfilJoa.png",
       "tareas": [
         {
-          "id": 1,
-          "fecha": "2026-01-06",
-          "hora": "12:30",
-          "tarea": "Comer"
-        },
-        {
           "id": 1767813000031,
           "fecha": "07/01/2026",
           "hora": "16:09",
           "tarea": "Estudiar Node"
+        },
+        {
+          "id": 1767886541318,
+          "fecha": "08/01/2026",
+          "hora": "12:34",
+          "tarea": "Practicar js (promesas metodos asincronos y esperas)"
+        },
+        {
+          "id": 1767890800437,
+          "fecha": "08/01/2026",
+          "hora": "13:46",
+          "tarea": "comer"
         }
       ]
     },
@@ -35,6 +41,12 @@
           "tarea": "Estudiar JavaScript"
         }
       ]
+    },
+    {
+      "id": "bd73",
+      "username": "lauty777",
+      "mail": "lautarorex777@gmail.com",
+      "pass": "123456"
     }
   ]
 }
