@@ -3,6 +3,9 @@ const usuarioLogeado = JSON.parse(localStorage.getItem("usuarioLogeado"));
 const usuarioId = usuarioLogeado.id;
 const mensajeBienvenida = document.getElementById("titulo-bienvenida");
 
+let fechaCompleta = "";
+let horaCompleta = "";
+
 mensajeBienvenida.innerHTML = `Bienvenido ${usuarioLogeado.username}`;
 parrafoMail.innerHTML = `${usuarioLogeado.mail}`;
 
@@ -11,21 +14,27 @@ const fotoPerfil = document.getElementById("fotoPerfil");
 fotoPerfil.src = usuarioLogeado.fotoPerfil;
 //
 
-//OBTENER FECHA Y HORA
-const fecha = new Date();
-//FECHA
-let año = fecha.getFullYear();
-let mes = fecha.getMonth() + 1;
-let dia = fecha.getDate();
-mes = (mes < 10 ? '0' : '') + mes;
-dia = (dia < 10 ? '0' : '') + dia;
-const fechaCompleta = `${dia}/${mes}/${año}`;
-//HORA
-let horas = fecha.getHours();
-let minutos = fecha.getMinutes();
-horas = (horas < 10 ? '0' : '') + horas;
-minutos = (minutos < 10 ? '0' : '') + minutos;
-const horaCompelta = `${horas}:${minutos}`
+function actualizarFechaHora() {
+
+    const fecha = new Date();
+
+    //FECHA
+    let año = fecha.getFullYear();
+    let mes = fecha.getMonth() + 1;
+    let dia = fecha.getDate();
+    mes = (mes < 10 ? '0' : '') + mes;
+    dia = (dia < 10 ? '0' : '') + dia;
+
+    fechaCompleta = `${dia}/${mes}/${año}`;
+    //HORA
+    let horas = fecha.getHours();
+    let minutos = fecha.getMinutes();
+    horas = (horas < 10 ? '0' : '') + horas;
+    minutos = (minutos < 10 ? '0' : '') + minutos;
+
+    horaCompleta = `${horas}:${minutos}`
+}
+
 
 function cerrarSesion() {
     localStorage.removeItem("usuarioLogeado");
@@ -46,6 +55,8 @@ form.addEventListener("submit", agregarTarea)
 
 async function agregarTarea(event) {
     event.preventDefault();
+
+    actualizarFechaHora();
     try {
         const usuarioData = await usuarioDataActual()
 
@@ -53,7 +64,7 @@ async function agregarTarea(event) {
         const nuevaTarea = {
             id: Date.now(),
             fecha: fechaCompleta,
-            hora: horaCompelta,
+            hora: horaCompleta,
             tarea: tarea
         };
         usuarioData.tareas.push(nuevaTarea);
@@ -68,31 +79,38 @@ async function agregarTarea(event) {
     }
 }
 
-
-
 async function dibujarTareas() {
-    const contenedorTareas = document.getElementById("contenedorTareas");
 
-    const pFecha = document.getElementById("pFecha");
-    const pHora = document.getElementById("pHora");
-    const pTarea = document.getElementById("pTarea");
+    const contenedorTareas = document.getElementById("contenedorTareas");
+    contenedorTareas.innerHTML = ""
 
     const data = await usuarioDataActual();
     const dataTareas = data.tareas
 
     dataTareas.forEach(t => {
         contenedorTareas.innerHTML += `
-            <div class="encabezado-tarea">
+            <div class="tarea-card">
+                <div class="encabezado-tarea">
                 <input type="checkbox" class="input-checkbox">
-                <p id="pFecha" class="pFecha">${t.fecha}</p>
-                <p id="pHora" class="pHora">${t.hora}</p>
-                <button class="btn-eliminar">Eliminar</button>
-            </div>
+                <p class="pFecha">${t.fecha}</p>
+                <p class="pHora">${t.hora}</p>
+                <button onclick="eliminarTarea(${t.id})" class="btn-eliminar">Eliminar</button>
+                </div>
 
-            <div class="contenedor-comentario-tarea">
-                <p id="pTarea" class="pTarea">${t.tarea}</p>
+                <div class="contenedor-comentario-tarea">
+                <p class="pTarea">${t.tarea}</p>
+                </div>
             </div> `
     });
 }
 
 dibujarTareas()
+
+async function eliminarTarea(id){
+
+    // const data = await usuarioDataActual();
+    // const dataTareas = data.tareas
+
+    // const response =  axios.delete(`${dataTareas}/${id}`)
+    // dibujarTareas()
+}

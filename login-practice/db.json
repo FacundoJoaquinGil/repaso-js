@@ -20,10 +20,16 @@
           "tarea": "Practicar js (promesas metodos asincronos y esperas)"
         },
         {
-          "id": 1767890800437,
-          "fecha": "08/01/2026",
-          "hora": "13:46",
-          "tarea": "comer"
+          "id": 1767978933221,
+          "fecha": "09/01/2026",
+          "hora": "14:15",
+          "tarea": "Dar funcionalidad checkbox y boton eliminar"
+        },
+        {
+          "id": 1767980451090,
+          "fecha": "09/01/2026",
+          "hora": "14:40",
+          "tarea": "asddsa"
         }
       ]
     },
@@ -39,6 +45,12 @@
           "fecha": "2026-01-07",
           "hora": "18:00",
           "tarea": "Estudiar JavaScript"
+        },
+        {
+          "id": 1767974567309,
+          "fecha": "09/01/2026",
+          "hora": "13:01",
+          "tarea": "Comer frutas"
         }
       ]
     },
