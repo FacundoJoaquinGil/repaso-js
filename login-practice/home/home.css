@@ -83,7 +83,6 @@ main {
 }
 
 .titulo-tarea {
-
     color: white;
 }
 
@@ -128,13 +127,11 @@ main {
     
 }
 
-.contenedor-tareas {
-    
+.contenedor-tareas {   
     width: 40%;
 }
 
-.tarea-card{
-    
+.tarea-card{    
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
@@ -147,16 +144,21 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.161);
 }
 
-.tareas-vacia {
+.encabezado-tarea-vacia{
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.tareas-vacia{
     text-align: center;
-    font-weight: 500;
+    font-weight: 500; 
     color: #555;
 }
 
 .encabezado-tarea {
     display: flex;
     align-items: center;
-    /* mantiene todo centrado */
     gap: 10px;
 }
 
@@ -206,6 +208,20 @@ main {
 .pTarea {
     color: white;
     font-weight: 500;
+}
+
+.pTareaHecha{
+    text-decoration: line-through;
+    color: #555;
+    font-weight: 500;
+}
+
+.pFechaDark{
+    color: #292727;
+}
+
+.pHoraDark{
+color: #292727;
 }
 
 .btn-eliminar {

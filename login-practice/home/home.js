@@ -73,7 +73,7 @@ async function agregarTarea(event) {
         await axios.patch(`${url}/${usuarioId}`, {
             tareas: usuarioData.tareas
         });
-        alert("Tarea agregada ✅");
+        alert("Tarea agregada 📝");
     } catch (error) {
         console.log(error);
     }
@@ -81,17 +81,26 @@ async function agregarTarea(event) {
 
 async function dibujarTareas() {
 
-    const contenedorTareas = document.getElementById("contenedorTareas");
-    contenedorTareas.innerHTML = ""
+    try {
+        const contenedorTareas = document.getElementById("contenedorTareas");
+        contenedorTareas.innerHTML = ""
+        const data = await usuarioDataActual();
+        const dataTareas = data.tareas
 
-    const data = await usuarioDataActual();
-    const dataTareas = data.tareas
-
-    dataTareas.forEach(t => {
-        contenedorTareas.innerHTML += `
+        if (dataTareas.length === 0) {
+            contenedorTareas.innerHTML += `
+            <div class="tarea-card">
+                <div class="encabezado-tarea-vacia">
+                <div class="contenedor-comentario-tarea">
+                <p class="tareas-vacia">No hay tareas todavía. ¡Escribe la primera!</p>
+                </div>
+            </div> `
+        } else {
+            dataTareas.forEach(t => {
+                contenedorTareas.innerHTML += `
             <div class="tarea-card">
                 <div class="encabezado-tarea">
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" class="input-checkbox" onchange="tareaHecha(this)">
                 <p class="pFecha">${t.fecha}</p>
                 <p class="pHora">${t.hora}</p>
                 <button onclick="eliminarTarea(${t.id})" class="btn-eliminar">Eliminar</button>
@@ -101,16 +110,48 @@ async function dibujarTareas() {
                 <p class="pTarea">${t.tarea}</p>
                 </div>
             </div> `
-    });
+            });
+        }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 dibujarTareas()
 
-async function eliminarTarea(id){
+async function eliminarTarea(id) {
+    try {
+        const usuarioData = await usuarioDataActual()
+        const tarea = usuarioData.tareas;
+        const tareaEliminada = tarea.filter(u => u.id != id)
+        const response = await axios.patch(`${url}/${usuarioId}`, {
+            tareas: tareaEliminada
+        })
+        dibujarTareas()
+        alert("Tarea Eliminada ✅")
+    } catch (error) {
+        console.log(error);
+    }
 
-    // const data = await usuarioDataActual();
-    // const dataTareas = data.tareas
-
-    // const response =  axios.delete(`${dataTareas}/${id}`)
-    // dibujarTareas()
 }
+
+function tareaHecha(checkbox) {
+    const card = checkbox.closest(".tarea-card"); 
+    const pHora = card.querySelector(".pHora");
+    const pFecha = card.querySelector(".pFecha");
+    const pTarea = card.querySelector(".pTarea"); 
+
+    if (checkbox.checked) {
+        pTarea.classList.add("pTareaHecha");
+        pFecha.classList.add("pFechaDark")
+        pHora.classList.add("pHoraDark")
+    } else {
+        
+        pTarea.classList.remove("pTareaHecha");
+        pFecha.classList.remove("pFechaDark")
+        pHora.classList.remove("pHoraDark")
+    }
+}
+
+
+
