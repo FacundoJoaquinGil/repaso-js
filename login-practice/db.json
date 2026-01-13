@@ -8,22 +8,18 @@
       "fotoPerfil": "../image/perfilJoa.png",
       "tareas": [
         {
-          "id": 1767813000031,
-          "fecha": "07/01/2026",
-          "hora": "16:09",
-          "tarea": "Estudiar Node"
+          "id": 1768319418000,
+          "fecha": "13/01/2026",
+          "hora": "12:50",
+          "tarea": "Comer",
+          "realizada": false
         },
         {
-          "id": 1767886541318,
-          "fecha": "08/01/2026",
-          "hora": "12:34",
-          "tarea": "Practicar js (promesas metodos asincronos y esperas)"
-        },
-        {
-          "id": 1767978933221,
-          "fecha": "09/01/2026",
-          "hora": "14:15",
-          "tarea": "Dar funcionalidad checkbox y boton eliminar"
+          "id": 1768319421662,
+          "fecha": "13/01/2026",
+          "hora": "12:50",
+          "tarea": "Dormir",
+          "realizada": true
         }
       ]
     },

@@ -65,7 +65,8 @@ async function agregarTarea(event) {
             id: Date.now(),
             fecha: fechaCompleta,
             hora: horaCompleta,
-            tarea: tarea
+            tarea: tarea,
+            realizada: false
         };
         usuarioData.tareas.push(nuevaTarea);
 
@@ -79,7 +80,7 @@ async function agregarTarea(event) {
     }
 }
 
-async function dibujarTareas() {
+async function dibujarTareas(){
 
     try {
         const contenedorTareas = document.getElementById("contenedorTareas");
@@ -100,14 +101,14 @@ async function dibujarTareas() {
                 contenedorTareas.innerHTML += `
             <div class="tarea-card">
                 <div class="encabezado-tarea">
-                <input type="checkbox" class="input-checkbox" onchange="tareaHecha(this)">
-                <p class="pFecha">${t.fecha}</p>
-                <p class="pHora">${t.hora}</p>
+                <input type="checkbox" class="input-checkbox" onchange="tareaHecha(this, ${t.id})" ${t.realizada ? "checked" : ""}>
+                <p class="pFecha ${t.realizada ? "pFechaDark" : ""}">${t.fecha}</p>
+                <p class="pHora ${t.realizada ? "pHoraDark" : ""}">${t.hora}</p>
                 <button onclick="eliminarTarea(${t.id})" class="btn-eliminar">Eliminar</button>
                 </div>
 
                 <div class="contenedor-comentario-tarea">
-                <p class="pTarea">${t.tarea}</p>
+                <p class="pTarea ${t.realizada ? "pTareaHecha" : ""}">${t.tarea}</p>
                 </div>
             </div> `
             });
@@ -116,7 +117,6 @@ async function dibujarTareas() {
         console.log(error)
     }
 }
-
 dibujarTareas()
 
 async function eliminarTarea(id) {
@@ -135,21 +135,19 @@ async function eliminarTarea(id) {
 
 }
 
-function tareaHecha(checkbox) {
-    const card = checkbox.closest(".tarea-card"); 
-    const pHora = card.querySelector(".pHora");
-    const pFecha = card.querySelector(".pFecha");
-    const pTarea = card.querySelector(".pTarea"); 
-
-    if (checkbox.checked) {
-        pTarea.classList.add("pTareaHecha");
-        pFecha.classList.add("pFechaDark")
-        pHora.classList.add("pHoraDark")
-    } else {
-        
-        pTarea.classList.remove("pTareaHecha");
-        pFecha.classList.remove("pFechaDark")
-        pHora.classList.remove("pHoraDark")
+async function tareaHecha(checkbox, id) {
+    try {
+        const usuarioData = await usuarioDataActual()
+        let todasLasTareas = usuarioData.tareas;
+        let index = todasLasTareas.findIndex(u => u.id === id)
+        todasLasTareas[index].realizada = !todasLasTareas[index].realizada
+        console.log(todasLasTareas)
+        await axios.patch(`${url}/${usuarioId}`, {
+            tareas: todasLasTareas
+        })
+        dibujarTareas()
+    } catch (error) {
+        console.log(error)
     }
 }
 
