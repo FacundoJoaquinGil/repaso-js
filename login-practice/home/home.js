@@ -2,12 +2,13 @@ const url = "http://localhost:3000/usuarios";
 const usuarioLogeado = JSON.parse(localStorage.getItem("usuarioLogeado"));
 const usuarioId = usuarioLogeado.id;
 const mensajeBienvenida = document.getElementById("titulo-bienvenida");
+const parrafoMail = document.getElementById("parrafoMail");
 
 let fechaCompleta = "";
 let horaCompleta = "";
 
 mensajeBienvenida.innerHTML = `Bienvenido ${usuarioLogeado.username}`;
-parrafoMail.innerHTML = `${usuarioLogeado.mail}`;
+parrafoMail.innerHTML = usuarioLogeado.mail;
 
 //Experimental
 const fotoPerfil = document.getElementById("fotoPerfil");
@@ -34,6 +35,17 @@ function actualizarFechaHora() {
 
     horaCompleta = `${horas}:${minutos}`
 }
+
+// function actualizarFechaHora() {
+//   const fecha = new Date();
+
+//   fechaCompleta = fecha.toLocaleDateString("es-AR");
+//   horaCompleta = fecha.toLocaleTimeString("es-AR", {
+//     hour: "2-digit",
+//     minute: "2-digit"
+//   });
+// }
+
 
 
 function cerrarSesion() {
@@ -140,11 +152,14 @@ async function tareaHecha(checkbox, id) {
         const usuarioData = await usuarioDataActual()
         let todasLasTareas = usuarioData.tareas;
         let index = todasLasTareas.findIndex(u => u.id === id)
-        todasLasTareas[index].realizada = !todasLasTareas[index].realizada
-        console.log(todasLasTareas)
+        if (index === -1) return;
+
+        todasLasTareas[index].realizada = checkbox.checked;
+
         await axios.patch(`${url}/${usuarioId}`, {
             tareas: todasLasTareas
         })
+
         dibujarTareas()
     } catch (error) {
         console.log(error)

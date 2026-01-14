@@ -9,8 +9,9 @@ async function registrar(event) {
     const username = document.getElementById("input-username-register").value
     const mail = document.getElementById("input-mail-register").value
     const pass = document.getElementById("input-pass-register").value
+    const tareas = []
     
-    const data = {username, mail , pass}
+    const data = {username, mail , pass, tareas}
     
     try {
         const registro = await axios.post(url, data);
