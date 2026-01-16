@@ -1,0 +1,20 @@
+{
+  "name": "backend-todo-login",
+  "version": "0.0.1",
+  "description": "backend creado para consumir tareas y usuarios asi como almancenar de manera correcta archivos subidos por el usuario",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "Joaquin Gil",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  }
+}

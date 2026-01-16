@@ -12,14 +12,14 @@
           "fecha": "13/01/2026",
           "hora": "12:50",
           "tarea": "Comer",
-          "realizada": false
+          "realizada": true
         },
         {
           "id": 1768319421662,
           "fecha": "13/01/2026",
           "hora": "12:50",
           "tarea": "Dormir",
-          "realizada": true
+          "realizada": false
         }
       ]
     },
