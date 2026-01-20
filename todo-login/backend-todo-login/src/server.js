@@ -1,23 +1,18 @@
 const express = require("express")
-const {config} = require("dotenv")
-const cors = require("cors"); //adicional
-const {leerDB} = require("../services/db.service");
+const cors = require("cors"); //le da permiso al dominio del front para pasar
+const {config} = require("dotenv") //falta env-var
+const loginRoute = require("./routes/login.route");
 
 
 config()
 const app = express()
-const port = process.env.PORT || 2000;
+app.use(cors());
+app.use(express.json()); //Para usar JSON
 
-app.use(cors()); //adicional
-
-app.get("/db", (req, res) => {
-  const db = leerDB();
-  res.json(db);
-});
-
+app.use(loginRoute); //ruta
+const port = process.env.PORT || 8000;
 
 app.listen(port,()=>{
     console.log(`Servidor corriendo en http://localhost:${port}`)
-    console.log(`Base de datos corriendo en http://localhost:${port}/db`)
 })
 

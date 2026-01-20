@@ -6,38 +6,73 @@ const inputPass = document.getElementById("input-pass");
 
 form.addEventListener("submit", ingresar)
 
-async function ingresar(event) {
-    event.preventDefault()
-    try {
+// async function ingresar(event) {
+//     event.preventDefault()
+//     try {
 
+//         const mail = inputEmail.value;
+//         const pass = inputPass.value;
+
+//         //const usuarioEncontrado = await axios.get(`${url}?mail=${mail}&pass=${pass}`)
+
+//         if(usuarioEncontrado.data.length != 0){
+            
+//             const usuario = usuarioEncontrado.data[0];
+            
+//             const usuarioLogeado = {
+//                 id: usuario.id,
+//                 username: usuario.username,
+//                 mail: usuario.mail,
+//                 fotoPerfil: usuario.fotoPerfil
+//             }
+            
+//             localStorage.setItem("usuarioLogeado", JSON.stringify(usuarioLogeado))
+            
+//             window.location.href = "../home/home.html"
+
+//         }else{
+//             alert("contraseña o email incorrectos")
+//         }
+
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
+
+async function ingresar(event) {
+    event.preventDefault();
+
+    try {
         const mail = inputEmail.value;
         const pass = inputPass.value;
 
-        const usuarioEncontrado = await axios.get(`${url}?mail=${mail}&pass=${pass}`)
+        const response = await axios.post("http://localhost:3000/login", {
+            mail: mail,
+            pass: pass
+        });
 
-        if(usuarioEncontrado.data.length != 0){
-            
-            const usuario = usuarioEncontrado.data[0];
-            
-            const usuarioLogeado = {
-                id: usuario.id,
-                username: usuario.username,
-                mail: usuario.mail,
-                fotoPerfil: usuario.fotoPerfil
-            }
-            
-            localStorage.setItem("usuarioLogeado", JSON.stringify(usuarioLogeado))
-            
-            window.location.href = "../home/home.html"
+        const usuario = response.data.usuarioEncontrado
 
-        }else{
-            alert("contraseña o email incorrectos")
-        }
+        const usuarioLogeado = {
+            id: usuario.id,
+            username: usuario.username,
+            mail: usuario.mail,
+            fotoPerfil: usuario.fotoPerfil
+        };
+
+        localStorage.setItem(
+            "usuarioLogeado",
+            JSON.stringify(usuarioLogeado)
+        );
+
+        window.location.href = "../home/home.html";
 
     } catch (error) {
-        console.log(error)
+        alert("Email o contraseña incorrectos");
+        console.log(error);
     }
 }
+
 
 
 function checkboxEstado(){
