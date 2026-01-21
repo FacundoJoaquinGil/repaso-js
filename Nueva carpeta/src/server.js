@@ -1,12 +1,18 @@
 const express = require("express")
-const cors = require("cors")
+const rutaUsuario = require("./routes/route.usuario")
 
+ 
 const app = express();
 const port = 3000;
 
-app.use(cors())
+app.use(express.json())
+
+
+app.use("/", rutaUsuario)
 
 
 app.listen(port,() => {
     console.log(`Servidor corriendo en el puerto ${port}`)
 })
+
+
