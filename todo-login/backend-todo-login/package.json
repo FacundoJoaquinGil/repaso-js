@@ -2,7 +2,7 @@
   "name": "backend-todo-login",
   "version": "0.0.1",
   "description": "backend creado para consumir tareas y usuarios asi como almancenar de manera correcta archivos subidos por el usuario",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js"
