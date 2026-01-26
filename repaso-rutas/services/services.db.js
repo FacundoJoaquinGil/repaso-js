@@ -8,4 +8,8 @@ function leerDB(){
     return JSON.parse(data)
 }
 
-module.exports = { leerDB }
+function escribirDB(data){
+    fs.writeFileSync(db, JSON.stringify(data, null, 2))
+}
+
+module.exports = { leerDB, escribirDB }

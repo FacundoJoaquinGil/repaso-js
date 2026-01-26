@@ -1,4 +1,3 @@
-const express = require("express");
 const {escribirDB, leerDB} = require("../../services/db.service")
 const router = express.Router();
 

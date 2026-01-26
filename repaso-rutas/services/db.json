@@ -1,7 +1,64 @@
 {
-    "usuarios": [
-        {"nombre": "Joaquin"},
-        {"nombre": "Lucas"},
-        {"nombre": "Lauty"}
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "username": "FacJoaquin99",
+      "mail": "facundojoagl@gmail.com",
+      "pass": "123456",
+      "fotoPerfil": "../image/perfilJoa.png",
+      "tareas": [
+        {
+          "id": 1768319418000,
+          "fecha": "13/01/2026",
+          "hora": "12:50",
+          "tarea": "Comer",
+          "realizada": true
+        },
+        {
+          "id": 1768319421662,
+          "fecha": "13/01/2026",
+          "hora": "12:50",
+          "tarea": "Dormir",
+          "realizada": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "MoyaDev",
+      "mail": "moya@gmail.com",
+      "pass": "654321",
+      "fotoPerfil": "../image/perfilMoya.png",
+      "tareas": [
+        {
+          "id": 1,
+          "fecha": "2026-01-07",
+          "hora": "18:00",
+          "tarea": "Estudiar JavaScript"
+        },
+        {
+          "id": 1767974567309,
+          "fecha": "09/01/2026",
+          "hora": "13:01",
+          "tarea": "Comer frutas"
+        }
+      ]
+    },
+    {
+      "id": "cd98",
+      "username": "juanceto01",
+      "mail": "juan01@gmail.com",
+      "pass": "123456",
+      "fotoPerfil": "",
+      "tareas": []
+    },
+    {
+      "id": "1769449672176",
+      "username": "joak1",
+      "mail": "joa@gmail.com",
+      "pass": "123456",
+      "fotoPerfil": "",
+      "tareas": []
+    }
+  ]
 }
