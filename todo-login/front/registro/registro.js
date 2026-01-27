@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/usuarios";
+const url = "http://localhost:3000/registro";
 const formRegistro = document.getElementById("form-registro");
 
 formRegistro.addEventListener("submit", registrar)
@@ -15,7 +15,8 @@ async function registrar(event) {
     
     try {
         const registro = await axios.post(url, data);
-        alert(`${registro.data.username} registrado con exito`);
+        alert(`${data.username} registrado con exito`);
+        window.location.href = "../home/login.html";
     } catch (error) {
         console.log(error)
     }
@@ -23,3 +24,9 @@ async function registrar(event) {
 
 //const image = document.getElementById("input-image-register").value
 
+function checkboxEstado(){
+    const checkbox = document.getElementById("checkboxPass");
+    const pass = document.getElementById("inputpassregister")
+
+    checkbox.checked ? pass.type = "text" : pass.type = "password" 
+}

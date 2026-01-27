@@ -4,8 +4,8 @@ const { leerDB } = require("../../services/db.service");
 
 router.post("/login", (req, res) => {
     const db = leerDB();
-    const { email, pass } = req.body
-    const usuarioEncontrado = db.usuarios.find(u => u.email === email && u.pass === pass)
+    const { mail, pass } = req.body
+    const usuarioEncontrado = db.usuarios.find(u => u.mail === mail && u.pass === pass)
     
     if (!usuarioEncontrado) {
         return res.status(401).json({

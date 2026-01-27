@@ -50,6 +50,14 @@
       "mail": "juan01@gmail.com",
       "pass": "123456",
       "tareas": []
+    },
+    {
+      "id": "1769524722126",
+      "username": "facundo23",
+      "mail": "facundo23@gmail.com",
+      "pass": "123456",
+      "fotoPerfil": "",
+      "tareas": []
     }
   ]
 }

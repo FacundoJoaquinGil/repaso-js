@@ -99,7 +99,6 @@ main {
     
 }
 
-/* Hover botón file */
 
 
 /* Focus file */
@@ -108,7 +107,56 @@ main {
     outline: none;
 }
 
+/* chebox-pass */
 
+.contenedor-checkbox {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.lbl-checkpass {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.input-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #bbb;
+    border-radius: 4px;
+    display: grid;
+    place-content: center;
+    transition: all 0.2s ease;
+}
+
+.input-checkbox::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+    background-color: #1f72f5;
+    border-radius: 2px;
+}
+
+.input-checkbox:checked {
+    border-color: #1f72f5;
+}
+
+.input-checkbox:checked::before {
+    transform: scale(1);
+}
+
+/* ///// */
 
 .botones-registro {
     display: flex;

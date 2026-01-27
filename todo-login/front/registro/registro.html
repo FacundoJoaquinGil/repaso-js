@@ -34,13 +34,19 @@
 
                     <label class="lbl-password">
                         Contraseña
-                        <input id="input-pass-register" type="password" minlength="6" placeholder="••••••••" required>
+                        <input id="inputpassregister" type="password" minlength="6" placeholder="••••••••" required>
                     </label>
 
-                    <!-- <label class="lbl-image">
+                     <div class="contenedor-checkbox">
+                        <label class="lbl-checkpass"> Ver contraseña 
+                            <input class="input-checkbox" id="checkboxPass" type="checkbox" onchange="checkboxEstado()"> 
+                        </label>
+                    </div>
+
+                    <label class="lbl-image">
                         Foto de perfil
                         <input id="input-image-register" type="file" accept="image/*" required>
-                    </label> -->
+                    </label>
 
 
                     <div class="botones-registro">
@@ -65,8 +71,9 @@
 
     </div>
 
-    <script src="./registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="./registro.js" defer></script>
+
 </body>
 
 </html>
