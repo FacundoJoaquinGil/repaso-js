@@ -1,5 +1,6 @@
-// const {escribirDB, leerDB} = require("../services/db.service")
-// const express = require("express")
+// const { escribirDB, leerDB } = require("../services/db.service");
+// const express = require("express");
+// const uploadProfile = require("../middlewares/uploadImage");
 // const router = express.Router();
 
 
@@ -24,28 +25,27 @@
 
 // module.exports = router;
 
-const { escribirDB, leerDB } = require("../../services/db.service");
+const { escribirDB, leerDB } = require("../services/db.service");
 const express = require("express");
-const uploadProfile = require("../middlewares/uploadProfile");
+const uploadImage = require("../middlewares/uploadImage");
 
 const router = express.Router();
 
 router.post(
   "/registro",
-  uploadProfile.single("input-image-register"),
+  uploadImage.single("fotoPerfil"),
   (req, res) => {
     const db = leerDB();
 
-    const { username, mail, pass } = req.body;
-    const tareas = JSON.parse(req.body.tareas || "[]");
+    const { username, mail, pass, tareas } = req.body;
 
     const nuevoUsuario = {
       id: Date.now().toString(),
       username,
       mail,
       pass,
-      fotoPerfil: req.file ? `/uploads/${req.file.filename}` : "",
-      tareas
+      fotoPerfil: req.file ? req.file.filename : "",
+      tareas: tareas ? JSON.parse(tareas) : []
     };
 
     db.usuarios.push(nuevoUsuario);

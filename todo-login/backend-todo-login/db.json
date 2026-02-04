@@ -5,7 +5,7 @@
       "username": "FacJoaquin99",
       "mail": "facundojoagl@gmail.com",
       "pass": "123456",
-      "fotoPerfil": "../image/perfilJoa.png",
+      "fotoPerfil": "perfilJoa.png",
       "tareas": [
         {
           "id": 1768319418000,
@@ -28,7 +28,7 @@
       "username": "MoyaDev",
       "mail": "moya@gmail.com",
       "pass": "654321",
-      "fotoPerfil": "../image/perfilMoya.png",
+      "fotoPerfil": "moyaDevPerfil.jpg",
       "tareas": [
         {
           "id": 1,
@@ -45,18 +45,11 @@
       ]
     },
     {
-      "id": "cd98",
-      "username": "juanceto01",
-      "mail": "juan01@gmail.com",
+      "id": "1770218414949",
+      "username": "juan01",
+      "mail": "juanceto01@gmail.com",
       "pass": "123456",
-      "tareas": []
-    },
-    {
-      "id": "1769524722126",
-      "username": "facundo23",
-      "mail": "facundo23@gmail.com",
-      "pass": "123456",
-      "fotoPerfil": "",
+      "fotoPerfil": "1770218414944-juan.jpg",
       "tareas": []
     }
   ]

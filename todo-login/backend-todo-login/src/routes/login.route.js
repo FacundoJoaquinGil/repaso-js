@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { leerDB } = require("../../services/db.service");
+const { leerDB } = require("../services/db.service");
 
 router.post("/login", (req, res) => {
     const db = leerDB();

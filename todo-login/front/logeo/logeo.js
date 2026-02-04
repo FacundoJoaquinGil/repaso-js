@@ -16,16 +16,18 @@ async function ingresar(event) {
             pass: inputPass.value
         }    
         const response = await axios.post(`${url}`, data);
-
+        console.log(response)
         const usuario = response.data.usuarioEncontrado
-       
+        console.log(usuario)
 
         const usuarioLogeado = {
             id: usuario.id,
             username: usuario.username,
             mail: usuario.mail,
-            fotoPerfil: usuario.fotoPerfil
+            fotoPerfil: `http://localhost:3000/uploads/${usuario.fotoPerfil}`
         };
+
+
         console.log(usuarioLogeado)
 
         localStorage.setItem(

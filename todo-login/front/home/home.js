@@ -12,7 +12,7 @@ parrafoMail.innerHTML = usuarioLogeado.mail;
 
 //Experimental
 const fotoPerfil = document.getElementById("fotoPerfil");
-fotoPerfil.src = usuarioLogeado.fotoPerfil;
+fotoPerfil.src = usuarioLogeado.fotoPerfil; 
 //
 
 function actualizarFechaHora() {

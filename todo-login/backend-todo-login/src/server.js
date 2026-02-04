@@ -13,6 +13,9 @@ app.use(express.json()); //Para usar JSON
 app.use(loginRoute); //ruta
 app.use(registroRoute); //ruta
 
+app.use("/uploads", express.static("uploads"));
+
+
 const port = process.env.PORT || 8000;
 
 app.listen(port,()=>{
