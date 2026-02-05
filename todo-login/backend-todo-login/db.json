@@ -51,6 +51,14 @@
       "pass": "123456",
       "fotoPerfil": "1770218414944-juan.jpg",
       "tareas": []
+    },
+    {
+      "id": "1770302044105",
+      "username": "jorge23",
+      "mail": "jorge23@hotmail.com",
+      "pass": "111111",
+      "fotoPerfil": "1770302044100-Screenshot_1.jpg",
+      "tareas": []
     }
   ]
 }

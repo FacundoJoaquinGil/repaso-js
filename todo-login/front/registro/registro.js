@@ -26,8 +26,9 @@ async function registrar(event) {
       } //mensaje que se manda al backend (puede ser cualquier cosa pero especificamos)
     });
 
-    alert(`${username} registrado con éxito`);
-    //window.location.href = "../home/login.html";
+    window.location.href = "../logeo/logeo.html";
+    alert(`${username} registrado con éxito`);   
+
   } catch (error) {
     console.error(error);
   }
