@@ -1,7 +1,7 @@
 const { leerDB } = require("../services/db.service");
 
 const getUsuarioById = (req, res) => {
-    const { id } = req.params; //????
+    const { id } = req.params; //dato del endpoint
 
     const db = leerDB();
 

@@ -1,4 +1,5 @@
 const url = "http://localhost:3000/usuarios";
+
 const usuarioLogeado = JSON.parse(localStorage.getItem("usuarioLogeado"));
 const usuarioId = usuarioLogeado.id;
 const mensajeBienvenida = document.getElementById("titulo-bienvenida");

@@ -183,6 +183,11 @@ main {
     cursor: pointer;
 }
 
+.caution-size{
+    font-size: small;
+    color: red;
+}
+
 .btn-registrarse:hover {
     background-color: #2c82ff;
 }
