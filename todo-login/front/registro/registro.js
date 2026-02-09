@@ -10,6 +10,8 @@ async function registrar(event) {
   const mail = document.getElementById("input-mail-register").value;
   const pass = document.getElementById("inputpassregister").value;
   const image = document.getElementById("input-image-register").files[0]; //el primer elemento de la lista
+  const cautionSize = document.getElementById("cautionSize"); //el primer elemento de la lista
+
 
   const formData = new FormData();
   formData.append("username", username); //agregamos elementos clave-valor al objeto
@@ -17,6 +19,13 @@ async function registrar(event) {
   formData.append("pass", pass);
   formData.append("tareas", JSON.stringify([]));
   formData.append("fotoPerfil", image); 
+
+  const MAX_SIZE = 1024 * 1024; // 1 MB
+
+  if (image && image.size > MAX_SIZE) {
+  cautionSize.textContent = "Por favor, sube una imagen de menos de 1 MB.";
+  return; 
+  }
 
 
   try {
