@@ -1,5 +1,22 @@
 const url = "http://localhost:3000/registro";
 const formRegistro = document.getElementById("form-registro");
+const inputImage = document.getElementById("input-image-register");
+const cautionSize = document.getElementById("cautionSize");
+
+// cambiar por una funcion mas basica
+inputImage.addEventListener("change", function() {
+  cautionSize.textContent = "";
+  
+  const image = this.files[0];
+  
+  if (image && image.size > 1 * 1024 * 1024) {
+    cautionSize.textContent = "Por favor, sube una imagen de menos de 1 MB.";
+
+  }else{
+    cautionSize.textContent = "";
+    registrar()
+  }
+});
 
 formRegistro.addEventListener("submit", registrar);
 
@@ -9,37 +26,39 @@ async function registrar(event) {
   const username = document.getElementById("input-username-register").value;
   const mail = document.getElementById("input-mail-register").value;
   const pass = document.getElementById("inputpassregister").value;
-  const image = document.getElementById("input-image-register").files[0]; //el primer elemento de la lista
-  const cautionSize = document.getElementById("cautionSize"); //el primer elemento de la lista
+  const image = inputImage.files[0];
 
+  // ???????????
+  if (image && image.size > 1 * 1024 * 1024) {
+    cautionSize.textContent = "Por favor, sube una imagen de menos de 1 MB.";
+
+    return; // ???????????
+  }
 
   const formData = new FormData();
-  formData.append("username", username); //agregamos elementos clave-valor al objeto
+  formData.append("username", username);
   formData.append("mail", mail);
   formData.append("pass", pass);
   formData.append("tareas", JSON.stringify([]));
   formData.append("fotoPerfil", image); 
 
-  const MAX_SIZE = 1024 * 1024; // 1 MB
-
-  if (image && image.size > MAX_SIZE) {
-  cautionSize.textContent = "Por favor, sube una imagen de menos de 1 MB.";
-  return; 
-  }
-
-
   try {
     await axios.post(url, formData, {
       headers: {
         "Content-Type": "multipart/form-data"
-      } //mensaje que se manda al backend (puede ser cualquier cosa pero especificamos)
+      }
     });
 
-    window.location.href = "../logeo/logeo.html";
     alert(`${username} registrado con éxito`);   
+    window.location.href = "../logeo/logeo.html";
 
   } catch (error) {
     console.error(error);
+    
+    if (error.response?.data?.message) {
+      cautionSize.textContent = error.response.data.message;
+      //??????????????
+    }
   }
 }
 
