@@ -47,6 +47,18 @@ async function registrar(event) {
     alert(`${username} registrado con éxito`);
   }
   catch (error) {
-    console.error(error);
+
+    const message = error.response?.data?.message || "Error inesperado";
+    cautionSize.textContent = message; //////////////
+
   }
+
+}
+
+function checkboxEstado() {
+  const checkbox = document.getElementById("checkboxPass");
+
+  const pass = document.getElementById("inputpassregister")
+  
+  checkbox.checked ? pass.type = "text" : pass.type = "password"
 }

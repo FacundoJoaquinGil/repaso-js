@@ -4,6 +4,7 @@ const {config} = require("dotenv") //falta env-var y dot-env
 const loginRoute = require("./routes/login.route");
 const registroRoute = require("./routes/registro.route");
 const usuarios = require("./routes/usuarios.route");
+const errorHandler = require("../src/middlewares/errorHandler");
 
 
 config()
@@ -18,6 +19,8 @@ app.use(usuarios) // nueva ruta
 
 app.use("/uploads", express.static("uploads")); //archivos estaticos (imagenes)
 
+// MIDDLEWARE DE ERRORES: debe ir después de las rutas
+app.use(errorHandler);
 
 const port = process.env.PORT || 8000;
 
