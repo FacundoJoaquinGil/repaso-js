@@ -51,6 +51,14 @@
       "pass": "123456",
       "fotoPerfil": "1770218414944-juan.jpg",
       "tareas": []
+    },
+    {
+      "id": "1770989980478",
+      "username": "leon001",
+      "mail": "leonkennedy001@gmail.com",
+      "pass": "111111",
+      "fotoPerfil": "1770989980457-238587669.png",
+      "tareas": []
     }
   ]
 }

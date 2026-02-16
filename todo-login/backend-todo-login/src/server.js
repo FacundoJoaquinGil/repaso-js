@@ -4,7 +4,7 @@ const {config} = require("dotenv") //falta env-var y dot-env
 const loginRoute = require("./routes/login.route");
 const registroRoute = require("./routes/registro.route");
 const usuarios = require("./routes/usuarios.route");
-const errorHandler = require("../src/middlewares/errorHandler");
+const {errorHandler} = require("./middlewares/errorHandler");
 
 
 config()
@@ -12,9 +12,8 @@ const app = express()
 app.use(cors());
 app.use(express.json()); //Para usar JSON
 
-app.use(loginRoute); //ruta
-app.use(registroRoute); //ruta
-
+app.use(loginRoute); 
+app.use(registroRoute); 
 app.use(usuarios) // nueva ruta
 
 app.use("/uploads", express.static("uploads")); //archivos estaticos (imagenes)
